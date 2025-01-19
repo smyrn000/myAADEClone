@@ -3,9 +3,21 @@ import { Link } from 'react-router-dom';
 import Header from './Header';
 
 function Dashboard() {
+
+    const handleLogout = () => {
+        localStorage.removeItem('isLoggedIn');
+        localStorage.removeItem('user');
+    } ;
+
     return (
         <div className="dashboard">
             <Header />
+            <div>
+                    <br></br>
+                    <Link onClick={handleLogout} to="/" className="nav-link">
+                      Logout
+                    </Link>
+                  </div>
             <h1>Dashboard</h1>
             <br></br>
             <br></br>
