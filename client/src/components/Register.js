@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import Header from './Header';
 
 function Register() {
     const [username, setUsername] = useState('');
@@ -22,6 +24,13 @@ function Register() {
 
     return (
         <div className="form-container">
+            <Header />
+            <div>
+                <br></br>
+                <Link to="/" className="nav-link">
+                    Go Back
+                </Link>
+            </div>                  
             <h1>Register</h1>
             <form>
                 <input

@@ -1,37 +1,122 @@
 
-# Fullstack Project (Express.js + React)
+# Εφαρμογή MyAADE Fullstack
 
-This project contains a fullstack application with an Express.js backend and a React frontend.
+Αυτή η εφαρμογή είναι μια πλήρης web εφαρμογή που έχει σχεδιαστεί για τη διαχείριση πελατών, προϊόντων και παραστατικών, παρόμοια με τη λειτουργικότητα της υπηρεσίας "timologio". Χρησιμοποιεί **Express.js** με **SQLite** για το backend και **React** για το frontend.
 
-## Setup Instructions
+---
 
-1. Clone the repository.
-2. Navigate to the `server` folder and create a `.env` file based on `.env.example`.
-3. Install server dependencies:
-    ```bash
-    cd server
-    npm install
-    ```
-4. Start the server:
-    ```bash
-    npm start
-    ```
-5. Navigate to the `client` folder and install dependencies:
-    ```bash
-    cd client
-    npm install
-    ```
-6. Start the React app:
-    ```bash
-    npm start
-    ```
+## Χαρακτηριστικά
 
-## Project Structure
+- **Ταυτοποίηση Χρήστη**: Απλή εγγραφή και σύνδεση.
+- **Διαχείριση Πελατών**: Προσθήκη, προβολή, επεξεργασία και διαγραφή πελατών.
+- **Διαχείριση Προϊόντων**: Προσθήκη, προβολή, επεξεργασία και διαγραφή προϊόντων.
+- **Διαχείριση Παραστατικών**: Δημιουργία, προβολή και διαχείριση παραστατικών συνδεδεμένων με πελάτες και προϊόντα.
+- **Σύγχρονο Περιβάλλον Χρήστη**: Σχεδιασμένο με CSS για καθαρή και φιλική εμφάνιση.
 
-- `client/`: React frontend.
-- `server/`: Express backend.
+---
 
-## Notes
+## Προϋποθέσεις
 
-- Ensure MongoDB is running locally or provide a remote connection string in `.env`.
-    
+1. **Node.js**: Βεβαιωθείτε ότι έχετε εγκαταστήσει την έκδοση Node.js (v16 ή νεότερη).
+2. **npm**: Περιλαμβάνεται στο Node.js για τη διαχείριση εξαρτήσεων.
+3. **SQLite**: Το SQLite είναι προρυθμισμένο και περιλαμβάνεται στη βάση δεδομένων.
+
+---
+
+## Οδηγίες Ρύθμισης
+
+### 1. Κλωνοποίηση του Αποθετηρίου
+
+```bash
+git clone <repository_url>
+cd <project_folder>
+```
+
+### 2. Ρύθμιση Backend
+
+1. Μεταβείτε στον φάκελο `server`:
+   ```bash
+   cd server
+   ```
+2. Εγκαταστήστε τις εξαρτήσεις:
+   ```bash
+   npm install
+   ```
+3. Ρυθμίστε το περιβάλλον:
+   - Βεβαιωθείτε ότι το `.env` είναι σωστά ρυθμισμένο (παρέχεται το `.env.example`).
+   - Κύριες ρυθμίσεις:
+     ```plaintext
+     PORT=5000
+     ```
+4. Ξεκινήστε τον backend server:
+   ```bash
+   npm start
+   ```
+
+Ο backend θα τρέχει στο `http://localhost:5000`.
+
+---
+
+### 3. Ρύθμιση Frontend
+
+1. Μεταβείτε στον φάκελο `client`:
+   ```bash
+   cd ../client
+   ```
+2. Εγκαταστήστε τις εξαρτήσεις:
+   ```bash
+   npm install
+   ```
+3. Συνδέστε το αρχείο `styles.css`:
+   - Βεβαιωθείτε ότι το `public/index.html` περιλαμβάνει το αρχείο στυλ:
+     ```html
+     <link rel="stylesheet" href="styles.css">
+     ```
+4. Ξεκινήστε τον frontend server:
+   ```bash
+   npm start
+   ```
+
+Ο frontend θα τρέχει στο `http://localhost:3000`.
+
+---
+
+## Δοκιμή της Εφαρμογής
+
+1. Ανοίξτε τον browser σας και πηγαίνετε στο `http://localhost:3000`.
+2. Χρησιμοποιήστε τις παρακάτω λειτουργίες:
+   - **Εγγραφή**: Δημιουργήστε νέο χρήστη.
+   - **Σύνδεση**: Συνδεθείτε με τον δημιουργημένο χρήστη.
+   - **Πίνακας Ελέγχου**: Πρόσβαση στις ενότητες Πελατών, Προϊόντων και Παραστατικών.
+   - Εκτελέστε λειτουργίες CRUD (Create, Read, Update, Delete) για κάθε ενότητα.
+
+---
+
+## Δομή Έργου
+
+```
+project_folder/
+├── server/
+│   ├── database.sqlite          # Αρχείο βάσης δεδομένων SQLite
+│   ├── db.js                    # Αρχικοποίηση βάσης δεδομένων
+│   ├── routes.js                # Routes backend API
+│   ├── server.js                # Κύρια εφαρμογή backend
+│   └── .env                     # Ρυθμίσεις περιβάλλοντος
+├── client/
+│   ├── public/
+│   │   ├── index.html           # HTML template
+│   │   └── styles.css           # Παγκόσμια στυλ CSS
+│   ├── src/
+│   │   ├── components/          # React components (Login, Register, etc.)
+│   │   ├── index.js             # Κύριο αρχείο React
+│   │   └── App.js               # Component εφαρμογής με routing
+├── README.md                    # Οδηγίες έργου
+```
+
+---
+
+## Σημειώσεις
+
+- Το έργο έχει σχεδιαστεί για τοπική ανάπτυξη.
+- Βεβαιωθείτε ότι το `server/database.sqlite` είναι εγγράψιμο και προσβάσιμο.
+- Για παραγωγή, εξετάστε το ενδεχόμενο χρήσης πιο ισχυρής βάσης δεδομένων (π.χ. PostgreSQL, MySQL).

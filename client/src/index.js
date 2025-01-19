@@ -8,13 +8,11 @@ import Clients from './components/Clients';
 import Products from './components/Products';
 import Invoices from './components/Invoices';
 
-// Locate the root DOM element
 const container = document.getElementById('root');
 if (!container) {
     throw new Error("No root element found. Ensure index.html contains a <div id='root'></div>.");
 }
 
-// Render the React application
 const root = ReactDOM.createRoot(container);
 root.render(
     <React.StrictMode>

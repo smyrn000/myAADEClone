@@ -4,7 +4,6 @@ const db = require('./db');
 
 const router = express.Router();
 
-// Registration route
 router.post('/register', (req, res) => {
     const { username, password } = req.body;
     const query = 'INSERT INTO users (username, password) VALUES (?, ?)';    
@@ -17,7 +16,6 @@ router.post('/register', (req, res) => {
     });
 });
 
-// Login route
 router.post('/login', (req, res) => {
     const { username, password } = req.body;
     const query = 'SELECT * FROM users WHERE username = ? AND password = ?';
@@ -32,7 +30,6 @@ router.post('/login', (req, res) => {
     });
 });
 
-// Clients route
 router.get('/clients', (req, res) => {
     db.all('SELECT * FROM clients', [], (err, rows) => {
         if (err) {
@@ -55,10 +52,8 @@ router.post('/clients', (req, res) => {
     });
 });
 
-// Export routes
 module.exports = router;
 
-// Products routes
 router.get('/products', (req, res) => {
     db.all('SELECT * FROM products', [], (err, rows) => {
         if (err) {
@@ -81,7 +76,6 @@ router.post('/products', (req, res) => {
     });
 });
 
-// Invoices routes
 router.get('/invoices', (req, res) => {
     const query = `SELECT invoices.*, clients.name AS client_name
                    FROM invoices

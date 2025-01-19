@@ -2,7 +2,6 @@
 const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 
-// Database setup
 const dbPath = path.resolve(__dirname, 'database.sqlite');
 const db = new sqlite3.Database(dbPath, (err) => {
     if (err) {
@@ -10,7 +9,6 @@ const db = new sqlite3.Database(dbPath, (err) => {
     } else {
         console.log('Connected to SQLite database.');
 
-        // Create tables
         db.run(`CREATE TABLE IF NOT EXISTS users (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             username TEXT NOT NULL,

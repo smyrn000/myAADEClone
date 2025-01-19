@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import Header from './Header';
 
@@ -23,6 +24,12 @@ function Login() {
     return (
         <div className="form-container">
             <Header />
+            <div>
+                <br></br>
+                <Link to="/register" className="nav-link">
+                    Register
+                </Link>
+            </div>       
             <h1>Login</h1>
             <form>
                 <input
