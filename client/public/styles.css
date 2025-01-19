@@ -1,0 +1,162 @@
+
+/* Global Styles */
+
+/* Header Styles */
+.header {
+    background-color: #4caf50;
+    color: white;
+    text-align: left;
+    padding: 10px 10px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px #333;
+    margin-bottom: 20px;
+}
+
+.header-logo {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header and Navigation */
+h1, h2 {
+    color: #444;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;    
+    gap: 20px;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 2vh 2vw;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;    
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    background-color:#0056b3;
+    padding: 1vh 1vw;
+    
+}
+
+.list {
+    box-shadow: 10px 2px 5px red;
+    max-height: 40vh;
+    overflow-y: auto;
+}
+
+.list-item {
+    color: white;
+    padding: 0.5vh 2vw;
+    margin: 3vh 35vw;
+    text-align: center;    
+    background-color: #007BFF;
+    border-radius: 20px;
+}
+
+.list-item .title {
+    color: black;
+    padding: 0.3vh 0vw;
+    font-weight: bold;
+}
+
+.list-item .description {
+    padding: 0.3vh 0vw;
+}
+
+.list-item .price {
+    padding: 0.3vh 0vw;
+}
+
+.list-item .stock {
+    padding: 0.3vh 0vw;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input, select, button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Table Styles */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+/* Feedback Messages */
+.feedback {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #d9534f;
+}

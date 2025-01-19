@@ -1,6 +1,6 @@
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Header from './Header';
 
 function Login() {
     const [username, setUsername] = useState('');
@@ -21,24 +21,30 @@ function Login() {
     };
 
     return (
-        <div>
+        <div className="form-container">
+            <Header />
             <h1>Login</h1>
-            <input
-                type="text"
-                placeholder="Username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-            />
-            <input
-                type="password"
-                placeholder="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-            />
-            <button onClick={handleLogin}>Login</button>
+            <form>
+                <input
+                    type="text"
+                    placeholder="Username"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                    className="form-input"
+                />
+                <input
+                    type="password"
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    className="form-input"
+                />
+                <button type="button" onClick={handleLogin} className="form-button">
+                    Login
+                </button>
+            </form>
         </div>
     );
 }
 
 export default Login;
-    
